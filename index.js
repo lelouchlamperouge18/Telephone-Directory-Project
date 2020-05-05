@@ -63,8 +63,8 @@ function deleteContact(){
 function findContact(){
 	var name2 = readlineSync.question('Name: ');
 	var phone2 = readlineSync.question('Phone: ');
-	const result1 = contacts.find(contact => contact.name1 === name2);
-	const result2 = contacts.find(contact => contact.phone === parseInt(phone2));
+	const result1 = contacts.filter(contact => contact.name1 === name2);
+	const result2 = contacts.filter(contact => contact.phone === parseInt(phone2));
 	console.log(result1);
 	console.log(result2);
 }
